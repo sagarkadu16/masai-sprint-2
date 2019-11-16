@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="tips.html">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="head-background">
+        <!-- <div class="header">
+            <div>
+                <a href="./tips.html">Tips</a></div>
+            <div>Login</div>
+        </div> -->
+        <div id="head-content">
+            <p id="head-title">Expense Tracker</p>
+            <p>Track your money! Expenses and savings</p>
+        </div>
+    </div>
+    <div class="intro_back">
+        <div class="intro">
+            <div>
+                <p class="client_title">check your income and expenditure report</p>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter Name" id="client_name">
+            </div>
+            <div>
+                <input type="text" class="client_time" id="month" placeholder="Select Month...">
+            </div>
+            <div>
+                <input type="text" class="client_time" id="year" placeholder="Select Year">
+            </div>
+            <div>
+                <input type="submit" name="" id="client_submit" value="Submit">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ------------- income and expense data --------------  -->
+
+    <div id="expense-data">
+        <div>
+            <p>Welcome, <span id="name"> - </span> </p>
+            <p>Date: <span id="date"> - </span> </p>
+        </div>
+        <div>
+            <p>Enter Income Details:</p>
+            <input type="text" id="income_name" placeholder="Name of income source">
+            <select name="period" id="period_income">
+                <option value="duration">Select Duration</option>
+                <option value="Daily">Daily</option>
+                <option value="Monthly">Monthly</option>
+            </select>
+            <input type="number" id="income_amt" placeholder="Enter Amount in INR">
+            <input type="submit" id="btn_income" value="Submit income">
+            <input type="submit" id="reset_income" value="Add another">
+        </div>
+
+        <div>
+            <button id="expense_check">Enter Expenses</button>
+        </div>
+
+        <div>
+            <p>Enter Expense Details:</p>
+            <input type="text" id="expense_name" placeholder="Name of Expense">
+            <select name="period" id="period_expense">
+                    <option value="duration">Select Duration</option>
+                    <option value="Daily">Daily</option>
+                    <option value="Monthly">Monthly</option>
+                </select>
+            <input type="number" id="expense_amt" placeholder="Enter Amount in INR">
+            <input type="submit" id="btn_expense" value="Submit expense">
+            <input type="submit" id="reset_expense" value="Add another">
+        </div>
+        <div>
+            <input type="submit" value="send report">
+        </div>
+    </div>
+    x
+
+    <div id="total_report">
+        <div class="income_chart" id="income_chart">
+            <div>Income Details</div>
+            <!-- <div id="inc_before"></div> -->
+        </div>
+        <div class="expense_chart" id="expense_chart">
+            <div>Expense Details</div>
+            <!-- <div id="exp_before"></div> -->
+        </div>
+        <div class="total">
+            <div id="total_inc">Total Income <span id="total_income">0</span> INR</div>
+            <div id="total_exp">Total Expense <span id="total_expense">0</span> INR</div>
+            <div id="remaining_income">Remaining Income <span id="remaining_balance">0</span> INR </div>
+            <div id="message"></div>
+        </div>
+        <div>
+            <input type="submit" value="send report">
+        </div>
+    </div>
+
+
+
+    <script src="./logic.js"></script>
+</body>
+
+</html>
